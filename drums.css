@@ -1,0 +1,115 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: black;
+    color:white;
+}
+
+.heading{
+    color:rebeccapurple;
+    display: grid;
+    justify-items:center; 
+}
+.cointainer{
+    padding: 5%;
+    display: grid;
+    grid-template-rows: 10vh 5vh 1fr 1fr 1fr 1fr;
+    grid-template-columns:1fr;  
+    grid-template-areas:
+    "s"
+    "d"
+    "l1"
+    "l2"
+    "l3"
+    "l4";
+}
+.start_stop{
+    grid-area: s;
+}
+
+
+.display{
+    align-self: center;
+    justify-self: center;
+    grid-area: d;
+}
+.line1{
+    justify-self: center;
+    grid-area: l1;
+}
+.line2{
+    justify-self: center;
+    grid-area: l2;
+}
+.line3{
+    justify-self: center;
+    grid-area: l3;
+}
+.line4{
+    justify-self: center;
+    grid-area: l4;
+}
+.line1 button,.line2 button,.line3 button,.line4 button {
+    display: inline-block;
+    border: none;
+    height:7vw;
+    width: 7vw;
+    border-radius: 6%;
+    border: 10px solid black;
+    text-decoration: none;
+    background-color: #0069ed;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
+}
+
+.line1 .visible,.line2 .visible,.line3 .visible,.line4 .visible {
+    display: inline-block;
+    border: none;
+    height:7vw;
+    width: 7vw;
+    border-radius: 6%;
+    border: 10px solid black;
+    text-decoration: none;
+    background-color: green;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
+}
+
+.start_stop button{
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    margin :1%;
+    height: 30px;
+    width: 80px;
+    background-color: #12c998;
+    color:black;
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1;
+    cursor: pointer;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.start_stop .tempo{
+    float: right;
+
+}
