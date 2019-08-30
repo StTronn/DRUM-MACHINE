@@ -11,6 +11,21 @@
     <body>
         <div id="app"></div>
         <script type="text/babel">
+            class KitOption extends React.Component{
+                constructor(props){
+                    super(props);
+                }
+                render()
+                {
+                    return (
+                        <select value={this.props.set} onChange={this.props.handler}>
+                            <option value="1">kit 1</option>
+                            <option value="2">kit 2</option>
+                        </select>
+                    );
+                }
+
+            }
 
             class Cube extends React.Component{
                 constructor(props){
@@ -32,7 +47,7 @@
                       tempo:120,
                       counter:0,
                       bar:8,
-                      set:1,
+                      set:2,
                       pattern:[
                           Array(8).fill(false),
                           Array(8).fill(false),
@@ -41,7 +56,10 @@
                       ]
                     };
                 }
-                
+                setHandeler =(e)=>{
+                    this.setState({set : e.target.value});
+                }
+
                 increment=()=>{
                     this.setState(state=>({
                         counter:(state.counter+1)%this.state.bar
@@ -110,7 +128,7 @@
                     let sounds=['snare',' base','hi-ht',' clap'];
                     return (
                     <div className="wrap">
-                    <h1 className="heading">Drum Sequencer </h1>
+                    <h1 className="heading">Drum Machine </h1>
                     <div className="cointainer">
                         <div className="start_stop">
                             <button onClick={this.startTime.bind(this)} >Start</button>
@@ -131,6 +149,10 @@
                             })
                     }
 
+                    </div>
+                    <div className="change">
+                        <KitOption handler={this.setHandeler} set={this.state.set} />
+                        <KitOption handler={this.setHandeler} set={this.state.set} />
                     </div>
                     </div>
                 )

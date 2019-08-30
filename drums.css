@@ -113,3 +113,13 @@ body{
     float: right;
 
 }
+
+.change{
+    padding-left:20%; 
+    padding-right:20%; 
+    display:flex;
+    justify-content: space-between;
+}
+.change select{
+    float:left;
+}
